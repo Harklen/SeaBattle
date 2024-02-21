@@ -45,7 +45,8 @@ public class Game {
     }
 
     public void setShips(List<Ship> ships) {
-        this.ships = ships;
+        this.ships.clear();
+        this.ships.addAll(ships);
     }
 
     public List<GameHistory> getGameHistory() {
@@ -53,7 +54,8 @@ public class Game {
     }
 
     public void setGameHistory(List<GameHistory> gameHistory) {
-        this.gameHistory = gameHistory;
+        this.gameHistory.clear();
+        this.gameHistory.addAll(gameHistory);
     }
 
     public boolean isPlayerTurn() {
@@ -61,6 +63,8 @@ public class Game {
     }
 
     public void setPlayerTurn(boolean playerTurn) {
-        this.playerTurn = playerTurn;
+        if (this.playerTurn != playerTurn) {
+            this.playerTurn = playerTurn;
+        }
     }
 }
