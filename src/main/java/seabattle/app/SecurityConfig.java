@@ -32,7 +32,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        // Конфігурація для вбудованого користувача (замініть це на реальну автентифікацію користувача)
         auth.inMemoryAuthentication()
                 .withUser("user")
                 .password(passwordEncoder().encode("password"))
